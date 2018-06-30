@@ -10,9 +10,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-        
-        System.out.println( "Hello World!" );
+    	String s = "123.2";
+    	
+        System.out.println(s);
         
     }
 }

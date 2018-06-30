@@ -11,6 +11,9 @@ import org.cloudbus.cloudsim.UtilizationModelNull;
 import org.cloudbus.cloudsim.UtilizationModelPlanetLabInMemory;
 import org.cloudbus.cloudsim.examples.power.Constants;
 
+import com.lei.integration.CpuUtilizationModel;
+import com.lei.integration.RamUtilizationModel;
+
 /**
  * A helper class for the running examples for the PlanetLab workload.
  * 
@@ -55,9 +58,12 @@ public class PlanetLabHelper {
 						Constants.CLOUDLET_PES,
 						fileSize,
 						outputSize,
-						new UtilizationModelPlanetLabInMemory(
+						new CpuUtilizationModel(
 								files[i].getAbsolutePath(),
-								Constants.SCHEDULING_INTERVAL), utilizationModelNull, utilizationModelNull);
+								Constants.SCHEDULING_INTERVAL), 
+						new RamUtilizationModel(
+								files[i].getAbsolutePath(),
+								Constants.SCHEDULING_INTERVAL), utilizationModelNull);
 			} catch (Exception e) {
 				e.printStackTrace();
 				System.exit(0);

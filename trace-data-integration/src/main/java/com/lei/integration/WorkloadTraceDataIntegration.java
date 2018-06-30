@@ -17,7 +17,7 @@ public class WorkloadTraceDataIntegration {
 	int[] ramField = new int[Constants.NUMBER_OF_CLOUDLETS];
 	
 	public WorkloadTraceDataIntegration() throws FileNotFoundException {
-		this.file = new File(Constants.TraceDataFile);
+		this.file = new File(Constants.TRACE_DATA_FILE);
 		this.reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
 	}
 	

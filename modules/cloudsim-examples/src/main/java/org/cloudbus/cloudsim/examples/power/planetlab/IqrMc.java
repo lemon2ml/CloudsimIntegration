@@ -32,9 +32,9 @@ public class IqrMc {
 	public static void main(String[] args) throws IOException {
 		boolean enableOutput = true;
 		boolean outputToFile = false;
-		String inputFolder = IqrMc.class.getClassLoader().getResource("workload/planetlab").getPath();
+		String inputFolder = IqrMc.class.getClassLoader().getResource("workload").getPath();
 		String outputFolder = "output";
-		String workload = "20110303"; // PlanetLab workload
+		String workload = "GOOGLE_TRACE"; // PlanetLab workload
 		String vmAllocationPolicy = "iqr"; // Inter Quartile Range (IQR) VM allocation policy
 		String vmSelectionPolicy = "mc"; // Maximum Correlation (MC) VM selection policy
 		String parameter = "1.5"; // the safety parameter of the IQR policy
