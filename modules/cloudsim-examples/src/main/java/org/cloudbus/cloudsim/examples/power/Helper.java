@@ -38,6 +38,8 @@ import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 import org.cloudbus.cloudsim.util.MathUtil;
 
+import com.lei.integration.CpuRamPowerModel;
+
 /**
  * The Class Helper.
  * 
@@ -104,8 +106,10 @@ public class Helper {
 					new BwProvisionerSimple(Constants.HOST_BW),
 					Constants.HOST_STORAGE,
 					peList,
-					new VmSchedulerTimeSharedOverSubscription(peList),
-					Constants.HOST_POWER[hostType]));
+					new VmSchedulerTimeSharedOverSubscription(peList), 
+					new CpuRamPowerModel()
+					));
+					//Constants.HOST_POWER[hostType]));
 		}
 		return hostList;
 	}

@@ -16,11 +16,6 @@
 
 	<dependencies>
 		<dependency>
-			<artifactId>cloudsim-examples</artifactId>
-			<groupId>org.cloudbus.cloudsim</groupId>
-			<version>4.0</version>
-		</dependency>
-		<dependency>
 			<groupId>org.cloudbus.cloudsim</groupId>
 			<artifactId>cloudsim</artifactId>
 			<version>4.0</version>

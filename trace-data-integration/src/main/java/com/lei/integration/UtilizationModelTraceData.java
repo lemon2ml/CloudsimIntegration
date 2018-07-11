@@ -39,8 +39,8 @@ public class UtilizationModelTraceData implements UtilizationModel {
 		int n = cpudata.length;
 		for (int i = 0; i < n - 1; i++) {
 			String[] strs = input.readLine().split(",");
-			cpudata[i] = Integer.valueOf(strs[0]) / 100.0;
-			ramdata[i] = Integer.valueOf(strs[1]) / 100.0;
+			cpudata[i] = Double.valueOf(strs[0]);
+			ramdata[i] = Double.valueOf(strs[1]);
 		}
 		cpudata[n - 1] = cpudata[n - 2];
 		ramdata[n - 1] = ramdata[n - 2];

@@ -121,6 +121,26 @@ public class PowerHost extends HostDynamicWorkload {
 	}
 
 	/**
+	 * getEnergyForRam
+	 * @author leimeilian 2018.7.4
+	 * @param utilizationOfRam
+	 * @return
+	 */
+	
+	public double getEnergyForRam(double utilizationOfRam) {
+		int flag = -1;
+		if(utilizationOfRam <= 0.0) {
+			flag = -1;
+		}else if(utilizationOfRam <= 0.5){
+			flag = -2;
+		}else{
+			flag = -3;
+		}
+		return getPower(flag);
+	}
+	
+
+	/**
 	 * Sets the power model.
 	 * 
 	 * @param powerModel the new power model

@@ -59,8 +59,8 @@ public class WorkloadGeneration {
 	public boolean writeLine(String readline) throws IOException {
 		String cpustr = readline.split(",")[13];
 		String ramstr = readline.split(",")[6];
-		int k = ((Double) (Double.valueOf(ramstr) * 100.0)).intValue();
-		int j = ((Double) (Double.valueOf(cpustr) * 100.0)).intValue();
+		double k = Double.valueOf(cpustr);
+		double j = Double.valueOf(ramstr);
 
 		if (k == 0 || j == 0) {
 			return false;

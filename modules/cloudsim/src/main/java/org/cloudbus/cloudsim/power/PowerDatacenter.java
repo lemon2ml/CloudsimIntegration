@@ -203,6 +203,10 @@ public class PowerDatacenter extends Datacenter {
 						previousUtilizationOfCpu,
 						utilizationOfCpu,
 						timeDiff);
+				
+				double utilizationOfRam = host.getUtilizationOfRam();
+				timeFrameHostEnergy += host.getEnergyForRam(utilizationOfRam);
+				
 				timeFrameDatacenterEnergy += timeFrameHostEnergy;
 
 				Log.printLine();

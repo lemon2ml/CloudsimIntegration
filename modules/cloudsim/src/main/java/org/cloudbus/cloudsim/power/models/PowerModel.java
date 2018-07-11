@@ -38,5 +38,4 @@ public interface PowerModel {
 	 * @throws IllegalArgumentException when the utilization percentage is not between [0 and 1]
 	 */
 	double getPower(double utilization) throws IllegalArgumentException;
-
 }
